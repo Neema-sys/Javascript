@@ -1,0 +1,44 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="jsLab1Q2css.css">
+    <script src="jsLab1Q2.js"></script>
+</head>
+<body>
+<form name="contactForm" onsubmit="validateForm(event)">
+    <h2>Sign Up</h2>
+    <div class="row">
+        <label>Full Name</label>
+        <input type="text" id="name">
+        <div class="error" id="nameErr"></div>
+    </div>
+    <div class="row">
+        <label>Email</label>
+        <input type="text" id="email">
+        <div class="error" id="emailErr"></div>
+    </div>
+    <div class="row">
+        <label>Password</label>
+        <input type="password" id="password">
+        <div class="error" id="passErr"></div>
+    </div>
+    <div class="row">
+        <label>Confirm Password</label>
+        <input type="password" id="confirm-password">
+        <div class="error" id="confirmPassErr"></div> 
+    </div>
+    <div class="row">
+        <label>Phone</label>
+        <input type="text" id="phone" maxlength="20">
+        <div class="error" id="phoneErr"></div>
+    </div>
+    <div class="row">
+        <input type="submit" value="Submit">
+    </div>
+</form>
+</body>
+</html>

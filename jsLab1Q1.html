@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+<style type="text/css">
+
+	body {
+    font-size: 16px;
+    background: #f9f9f9;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	}
+	h2 {
+    text-align: center;
+    text-decoration: underline;
+	}
+	.form1 {
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+	}
+	.row {
+    padding-bottom: 10px;
+	}
+	input[type="submit"] {
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016BC1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+	}
+	input[type="submit"]:hover {
+	    background: #0165b6;
+	}
+</style>
+</head>
+
+
+
+
+<body>
+	<div class="form1">
+	<h2>Calculator</h2>
+ <div class="row">
+	First Number <input type="text" name="firstnum" id="n1">
+</div>
+<div class="row">
+	Second Number <input type="text" name="secondnum" id="n2">
+</div>
+<div class="row">
+	<label>Choose Option</label>
+	<select id="operator" name="operator">
+	  <option value="+">+</option>
+	  <option value="-">-</option>
+	  <option value="*">*</option>
+	  <option value="/">/</option>
+	</select>
+</div>
+
+<div class="row">
+
+	<input type="submit" onclick="calc();" value="Result">
+	
+</div>
+
+<div class="row">
+ 
+ 	<input type="text" id="result" name="output">
+</div>
+ </div>
+
+
+
+
+<!--javascript-->
+
+ 	<script type="text/javascript">
+ 		function calc()
+ 		{
+ 			var n1= parseFloat(document.getElementById('n1').value);
+ 			var n2= parseFloat(document.getElementById('n2').value);
+ 			var op=document.getElementById('operator').value;
+ 			
+
+ 			if(op ==='+')
+ 			{
+ 				document.getElementById('result').value = n1 + n2;
+
+ 			}
+
+ 			if(op ==='-')
+ 			{
+ 				document.getElementById('result').value = n1 - n2;
+
+ 			}
+
+ 			if(op ==='*')
+ 			{
+ 				document.getElementById('result').value = n1 * n2;
+
+ 			}
+
+ 			if(op ==='/')
+ 			{
+ 				document.getElementById('result').value = n1 / n2;
+
+ 			}
+
+ 		}
+ 		
+ 	</script>
+
+</body>
+</html>
